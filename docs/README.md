@@ -1124,8 +1124,9 @@ Two workarounds are available when you do not want to or can't find and solve th
 - The problem may only appear when templates are converted to signatures on computers configured with a display scaling higher than 100 %. In this case, the problem is in the Word conversion module or the HTML rendering engine of Outlook. The registry key described in <a href="https://learn.microsoft.com/en-US/outlook/troubleshoot/user-interface/graphics-file-attachment-grows-larger-in-recipient-email" target="_blank">this Microsoft article</a> may help here. After setting the registry key according to the article, Set-OutlookSignatures may need to run again.  
 
 Nonetheless, some scaling problems simply can not be solved in the HTML code of the signature, because the problem is in the rendering engine: For example, some Outlook 2016 builds scale images wrong when they are embedded and not linked. In this case, you can influence how images are displayed and converted from DOCX to HTM with the parameters '`EmbedImagesInHtml`' and '`DocxHighResImageConversion`':
+
 | Parameter  | Default<br>value | Alternate<br>configuration A | Alternate<br>configuration B | Alternate<br>configuration C |
-| - | - | - | - | - |
+| :- | :- | :- | :- | :- |
 | EmbedImagesInHtml | true | true | false | false |
 | DocxHighResImageConversion | true | false | true | false |
 | Influence on images | HTM signatures with images consist of a single file<br><br>Office 2013 can't handle embedded images<br><br>Some versions of Office/Outlook/Word (some Office 2016 builds, for example) show embedded images wrongly sized | HTM signatures with images consist of a single file<br><br>Office 2013 can't handle embedded images<br><br>Some versions of Office/Outlook/Word (some Office 2016 builds, for example) show embedded images wrongly sized<br><br>Images can look blurred and pixelated, especially on systems with high display resolution | HTM signatures with images consist of multiple files | HTM signatures with images consist of multiple files<br><br>Images can look blurred and pixelated, especially on systems with high display resolution |
