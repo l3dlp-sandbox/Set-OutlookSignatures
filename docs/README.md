@@ -39,7 +39,7 @@ The script core is **Free and Open-Source Software (FOSS)**. It is published und
 **Some features are exclusive to Benefactor Circle members.** Benefactor Circle members have access to an extension file enabling the exclusive features. This extension file is chargeable, and it is distributed under a proprietary, non-free and non-open-source licence.  Please see `.\docs\Benefactor Circle` for details.  
 
 **A big "Thank you!" for listing, featuring, supporting or sponsoring Set-OutlookSignatures!**
-<pre><a href="https://www.explicitconsulting.at" target="_blank"><img src="../src_Set-OutlookSignatures/logo/Others/ExplicIT Consulting, color on black.png" height="100" title="ExplicIT Consulting" alt="ExplicIT Consulting"></a>  <a href="https://archiveprogram.github.com/" target="_blank"><img src="../src_Set-OutlookSignatures/logo/Others/GitHub-Archive-Program-logo.png" height="100" title="GitHub Archive Program" alt="GitHub Archive Program"></a>  <a href="https://joinup.ec.europa.eu/collection/free-and-open-source-software/solution/set-outlooksignatures/about" target="_blank"><img src="../src_Set-OutlookSignatures/logo/Others/EC Joinup Interoperable Europe.png" height="100" title="European Commission Joinup/Interoperable Europe programs" alt="European Commission Joinup/Interoperable Europe programs"></a></pre>
+<pre><a href="https://explicitconsulting.at" target="_blank"><img src="../src_Set-OutlookSignatures/logo/Others/ExplicIT Consulting, color on black.png" height="100" title="ExplicIT Consulting" alt="ExplicIT Consulting"></a>  <a href="https://archiveprogram.github.com/" target="_blank"><img src="../src_Set-OutlookSignatures/logo/Others/GitHub-Archive-Program-logo.png" height="100" title="GitHub Archive Program" alt="GitHub Archive Program"></a>  <a href="https://joinup.ec.europa.eu/collection/free-and-open-source-software/solution/set-outlooksignatures/about" target="_blank"><img src="../src_Set-OutlookSignatures/logo/Others/EC Joinup Interoperable Europe.png" height="100" title="European Commission Joinup/Interoperable Europe programs" alt="European Commission Joinup/Interoperable Europe programs"></a></pre>
 
 # Table of Contents <!-- omit in toc -->
 - [1. Requirements](#1-requirements)
@@ -163,7 +163,7 @@ Read the following chapters in order:
 You now have a good theoretical overview.<br>If you want to know more before you start with the practical implementation, just read through the rest of the README file.
 
 **Set-OutlookSignatures is very well documented, which inevitably brings with it a lot of content.  
-If you are looking for someone with experience who can quickly train you and assist with evaluation, planning, implementation and ongoing operations: Our partner [ExplicIT Consulting](https://www.explicitconsulting.at) offers professional support and also the [Benefactor Circle add-on](https://www.explicitconsulting.at/opensource/set-outlooksignatures) with enhanced features.**
+If you are looking for someone with experience who can quickly train you and assist with evaluation, planning, implementation and ongoing operations: Our partner [ExplicIT Consulting](https://explicitconsulting.at) offers professional support and also the [Benefactor Circle add-on](https://explicitconsulting.at/open-source/set-outlooksignatures) with enhanced features.**
 
 To start with the practical implementation:
 1. Log on to a Windows client with a test user having an Exchange mailbox, and configure Outlook
@@ -215,7 +215,7 @@ It is strongly recommended to not change any Set-OutlookSignatures files and kee
 Regarding configuration files: Besides the template configuration files for signatures and OOF messages, there are the Graph configuration file and the replacement variable configuration file.  
 It is rarely needed to change the configuration within these files.<br>The configuration files themselves contain specific information on how to use them.<br>The configuration files are referenced in the documentation whenever there is a need or option to change them.
 
-**[Benefactor Circle members](https://www.explicitconsulting.at/opensource/set-outlooksignatures) have access to a document covering the organizational aspects of introducing Set-OutlookSignatures.**  
+**[Benefactor Circle members](https://explicitconsulting.at/open-source/set-outlooksignatures) have access to a document covering the organizational aspects of introducing Set-OutlookSignatures.**  
 The content is based on real life experiences implementing the script in multi-client environments with a five-digit number of mailboxes.  
 It contains proven procedures and recommendations for product managers, architects, operations managers, account managers and e-mail and client administrators. It is suited for service providers as well as for clients.  
 It covers several general overview topics, administration, support, training across the whole lifecycle from counselling to tests, pilot operation and rollout up to daily business.

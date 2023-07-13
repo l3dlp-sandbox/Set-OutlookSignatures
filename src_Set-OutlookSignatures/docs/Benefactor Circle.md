@@ -2,11 +2,11 @@
 # **<a href="https://github.com/GruberMarkus/Set-OutlookSignatures" target="_blank"><img src="../src_Set-OutlookSignatures/logo/Set-OutlookSignatures%20Benefactor%20Circle%20Logo.png" width="400" title="Set-OutlookSignatures" alt="Set-OutlookSignatures Benefactor Circle"></a>**<br>Centrally manage and deploy Outlook text signatures and Out of Office auto reply messages<p><p><!--XXXRemoveWhenBuildingXXX<a href="https://github.com/GruberMarkus/Set-OutlookSignatures/releases" target="_blank"><img src="https://img.shields.io/badge/this%20release-XXXVersionStringXXX-informational" alt="this release"></a> XXXRemoveWhenBuildingXXX--> <a href="https://github.com/GruberMarkus/Set-OutlookSignatures/releases" target="_blank"><img src="https://img.shields.io/github/v/release/GruberMarkus/Set-OutlookSignatures?display_name=tag&include_prereleases&sort=semver&label=latest%20release&color=informational" alt="latest release" data-external="1"></a> <a href="https://github.com/GruberMarkus/Set-OutlookSignatures/issues" target="_blank"><img src="https://img.shields.io/github/issues/GruberMarkus/Set-OutlookSignatures" alt="open issues" data-external="1"></a> <img src="https://img.shields.io/badge/dynamic/json?color=brightgreen&label=views&query=%24.count&url=https%3A%2F%2Fraw.githubusercontent.com%2FGruberMarkus%2Fmy-traffic2badge%2Ftraffic%2Ftraffic-Set-OutlookSignatures%2Ftraffic_views.json" alt="views" data-external="1"> <img src="https://img.shields.io/badge/dynamic/json?color=brightgreen&label=clones&query=%24.count&url=https%3A%2F%2Fraw.githubusercontent.com%2FGruberMarkus%2Fmy-traffic2badge%2Ftraffic%2Ftraffic-Set-OutlookSignatures%2Ftraffic_clones.json" alt="clones" data-external="1"> <a href="https://github.com/GruberMarkus/Set-OutlookSignatures/stargazers" target="_blank"><img src="https://img.shields.io/github/stars/GruberMarkus/Set-OutlookSignatures?color=brightgreen" alt="stars" data-external="1"></a><br><a href="https://github.com/sponsors/GruberMarkus" target="_blank"><img src="https://img.shields.io/badge/donate,%20support,%20sponsor-white?logo=githubsponsors" alt="donate or sponsor"></a> <a href="./Benefactor%20Circle.md" target="_blank"><img src="https://img.shields.io/badge/unlock%20all%20features%20with-Benefactor%20Circle-gold" alt="unlock all features with Benefactor Circle"></a>
 
 # What is the Benefactor Circle?
-Benefactor Circle is the result of the partnership between Set-OutlookSignatures and <a href="https://www.explicitconsulting.at" target="_blank">ExplicIT Consulting</a>.  
-<pre><a href="https://www.explicitconsulting.at" target="_blank"><img src="../src_Set-OutlookSignatures/logo/Others/ExplicIT Consulting, color on black.png" height="100" title="ExplicIT Consulting" alt="ExplicIT Consulting"></a></pre>
+Benefactor Circle is the result of the partnership between Set-OutlookSignatures and <a href="https://explicitconsulting.at" target="_blank">ExplicIT Consulting</a>.  
+<pre><a href="https://explicitconsulting.at" target="_blank"><img src="../src_Set-OutlookSignatures/logo/Others/ExplicIT Consulting, color on black.png" height="100" title="ExplicIT Consulting" alt="ExplicIT Consulting"></a></pre>
 ExplicIT Consulting's Benefactor Circle enhances Set-OutlookSignatures with new features and extended support in form of a commercial add-on, ensuring that the core of Set-OutlookSignatures remains Free and Open-Source Software (FOSS) and continues to evolve.
 
-Visit <a href="https://www.explicitconsulting.at/support-for-open-source/set-outlooksignatures-benefactor-circle" target="_blank">ExplicIT Consulting's Set-OutlookSignatures Benefactor Circle site</a> for details and pricing information.
+Visit <a href="https://explicitconsulting.at/open-source/set-outlooksignatures" target="_blank">ExplicIT Consulting's Set-OutlookSignatures Benefactor Circle site</a> for details and pricing information.
 
 # Why choose Set-OutlookSignatures?
 - Runs only on your clients, no server side installation
@@ -71,7 +71,7 @@ Each mailbox, for which an exlusive feature shall be used, needs a licence. The 
 
 Licences are paid in advance and are valid for one year from the day the full payment is received. There is no automatic renewal.
 
-At the time of the release of this version of Set-OutlookSignatures, the following prices were set by [ExplicIT Consulting](https://www.explicitconsulting.at). Please check their homepage for updates.
+At the time of the release of this version of Set-OutlookSignatures, the following prices were set by [ExplicIT Consulting](https://explicitconsulting.at). Please check their homepage for updates.
 ```
 The net price in EUR currently is 1.50 € per mailbox and year, with a minimum annual total sum of 200 €.
 

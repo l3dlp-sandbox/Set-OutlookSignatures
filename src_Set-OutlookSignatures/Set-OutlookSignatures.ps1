@@ -1161,7 +1161,7 @@ function main {
                         continue
                     }
 
-                    if ($y -match '[a-zA-Z0-9.-]') {
+                    if ($y -match '[^a-zA-Z0-9.-]') {
                         Write-Host '    Allowed characters are a-z, A-Z, ., -. Skip entry.' -ForegroundColor Red
                         continue
                     }
