@@ -216,4 +216,3 @@ function Get-DeviceRegistrationStatus {
 # 9mjEoEOXd+qPwjEhbJdIOIHlOixSaOdz18bxr7f5iN5+7pB8/mOLIgudR1NQAfwO
 # /FSxkz3pweV1tcuTZ1WDbasyBz070i8=
 # SIG # End signature block
-

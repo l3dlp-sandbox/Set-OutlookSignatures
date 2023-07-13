@@ -584,4 +584,3 @@ function Get-MsalToken {
 # cl0jRX/Bg06hebyW/kBIwTUIhoI4azqsf4l412bxkM5Wh5Usl5iuR+LxWPNtszT2
 # 6iSpXL+s2r+ZVt/fXO1E1cQhCy86pOu210g=
 # SIG # End signature block
-

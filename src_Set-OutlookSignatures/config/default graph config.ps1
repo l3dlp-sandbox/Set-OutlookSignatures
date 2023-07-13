@@ -113,4 +113,3 @@ $GraphUserAttributeMapping = @{
     mailnickname               = 'mailNickname'
     st                         = 'state'
 }
-

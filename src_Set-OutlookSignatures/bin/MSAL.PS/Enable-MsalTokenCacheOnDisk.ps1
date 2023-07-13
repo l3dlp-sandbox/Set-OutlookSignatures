@@ -244,4 +244,3 @@ function Enable-MsalTokenCacheOnDisk {
 # WsmzKJY+CyBY0UhKhh6l+c8jekrWTRNOulrsTyDXIuVbqp2bbvby3Fv6Keer/kWO
 # tu5V9yJ+5bijqxdz44CN0NYVCz5EUQ==
 # SIG # End signature block
-

@@ -227,4 +227,3 @@ function Get-MsalAccount {
 # zmHyu+Gz4FmuYY9gazWRJjzaRqrjgkKhsD/lg7CAP1+MH/g97V8FBbODe+4U9pua
 # z6EhUmk36fbKXvHoq9t2Y+amwwQIDZUc+lnHHuLlfAMt6UEB
 # SIG # End signature block
-

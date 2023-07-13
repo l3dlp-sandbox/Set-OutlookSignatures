@@ -220,4 +220,3 @@ function Clear-MsalTokenCache {
 # dTmKR7BcHX9ywrmekQaQyVVZt7wCSOBjYNzaqpeHncce/xMXX8nm+1N9oUAUeqqx
 # mxsGghcxJCLw02qtLz4PFYgqNOThhhg=
 # SIG # End signature block
-

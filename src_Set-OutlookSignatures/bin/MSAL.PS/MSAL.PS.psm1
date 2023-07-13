@@ -1,4 +1,4 @@
-param (
+﻿param (
     # Provide module configuration
     [Parameter(Mandatory = $false)]
     [psobject] $ModuleConfiguration
@@ -238,4 +238,3 @@ $script:ModuleState = @{
 # AytcdMsX0sXiM72hZxDL/3kUIjvcyOr8jsHHVV9l9a9sSmNIQlIgJPuzUOEqW5Fp
 # PS4Bf1cMvTVihABaaMM7g8RM8zKA5SBw8no=
 # SIG # End signature block
-

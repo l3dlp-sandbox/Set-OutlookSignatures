@@ -292,4 +292,3 @@ function Write-HostPrompt {
 # KZFc5xp8ye/iJ5D/4v8cU76ExvgQTgiWUUdcQk048Apt4sxBBDAqB0BxWZgot13Q
 # cjHGHxP+iZ3bmnCbf3yE4gn0vyQm9Wc=
 # SIG # End signature block
-

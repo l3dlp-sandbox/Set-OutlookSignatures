@@ -248,4 +248,3 @@ function Add-MsalClientApplication {
 # JLse7b/bu6LSOqG/v49ZQXlpnctqJw1k4ybHz2f78SMeJh0M5mj8eNpfSxvYfr/8
 # GtZdZesrQO/tBF2hWI9uNeMwQACxVoDPfbVZsnY03OK2vWpX4q4=
 # SIG # End signature block
-

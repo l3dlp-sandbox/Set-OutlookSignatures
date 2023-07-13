@@ -267,4 +267,3 @@ function Get-MsalClientApplication {
 # AOK2o0up6kBjNGIXCBmwFfgWgXQsaSQQF5/AOVtZ5XM/Z4oW/06shyRwm0lTB1Hn
 # lboDDE8/IU0ds9/hJbaMZChRTStNZLg=
 # SIG # End signature block
-

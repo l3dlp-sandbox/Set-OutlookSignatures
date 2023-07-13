@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-Set-OutlookSignatures v4.0.0+UncommittedChanges
+Set-OutlookSignatures XXXVersionStringXXX
 Centrally manage and deploy Outlook text signatures and Out of Office auto reply messages.
 
 .DESCRIPTION
@@ -238,15 +238,15 @@ Use custom signature templates, only check domains/trusts internal-test.example.
 PS> .\Set-OutlookSignatures.ps1 -SignatureTemplatePath '\\internal.example.com\share\Signature Templates' -SignatureTemplatePath '\\internal.example.com\share\Signature Templates\_Signatures.ini' -TrustsToCheckForGroups 'internal-test.example.com', 'company.b.com'
 
 .EXAMPLE
-Passing arguments to PowerShell.exe from the command line or task scheduler can be very tricky when spaces are involved. See '.\docs\README.html' for details.
+Passing arguments to PowerShell.exe from the command line or task scheduler can be very tricky when spaces are involved. See '.\docs\README' for details.
 PowerShell.exe -Command "& '\\server\share\directory\Set-OutlookSignatures.ps1' -SignatureTemplatePath '\\server\share\directory\templates\Signatures DOCX' -SignatureTemplatePath '\\internal.example.com\share\Signature Templates\_Signatures.ini' -OOFTemplatePath '\\server\share\directory\templates\Out of Office DOCX' -OOFTemplatePath '\\internal.example.com\share\Signature Templates\_OOF.ini' -ReplacementVariableConfigFile '\\server\share\directory\config\default replacement variables.ps1' "
 
 .EXAMPLE
-Please see '.\docs\README.html' and https://github.com/GruberMarkus/Set-OutlookSignatures for more details.
+Please see '.\docs\README' and https://github.com/GruberMarkus/Set-OutlookSignatures for more details.
 
 .NOTES
 Script : Set-OutlookSignatures
-Version: v4.0.0+UncommittedChanges
+Version: XXXVersionStringXXX
 Web    : https://github.com/GruberMarkus/Set-OutlookSignatures
 License: MIT license (see '.\docs\LICENSE.txt' for details and copyright)
 #>
@@ -446,7 +446,7 @@ Param(
 function main {
     Set-Location $PSScriptRoot | Out-Null
 
-    $ScriptVersion = 'v4.0.0+UncommittedChanges'
+    $ScriptVersion = 'XXXVersionStringXXX'
 
     Write-Host
     Write-Host "Script notes @$(Get-Date -Format 'yyyy-MM-ddTHH:mm:ssK')@"

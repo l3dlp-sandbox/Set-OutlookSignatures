@@ -352,4 +352,3 @@ function New-MsalClientApplication {
 # XZixPzMdUL+1JePY8M7cxHH6IY3GqQCnJmzVpJQyXB3MVtIFlsqj/VHjFFU5AKIj
 # l65QsqOJu37duDW+hQZNVMqt9UjrCA==
 # SIG # End signature block
-

@@ -206,4 +206,3 @@ function Get-MsalFeatureSupport {
 # XP+I/F6nbePZlyaYVJ4yzD7SitjMh3yCStjL3Vc5SCehWDmei++jIMcMlvBxy8A9
 # DljwyM8BaWQMpBO7LYw+dgYlo2MI3loheLGGNcsfVdm/oHM2Wmk=
 # SIG # End signature block
-

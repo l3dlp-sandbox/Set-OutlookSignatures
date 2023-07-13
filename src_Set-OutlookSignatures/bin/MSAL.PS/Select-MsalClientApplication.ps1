@@ -287,4 +287,3 @@ function Select-MsalClientApplication {
 # 6zSgCkKqA4jnKX1QUA+GlnBp04fai0kBi7bg/1K9MkrLKin0uavNo5EOGBifn+SE
 # ESwAjO7RFDl83+VTqH1Wd2/jUjg+4Y/WTHjgHzp6WAAHEXttO4s=
 # SIG # End signature block
-
