@@ -18,6 +18,17 @@
 -->
 
 
+## <a href="https://github.com/GruberMarkus/Set-OutlookSignatures/releases/tag/v4.5.1-beta.1" target="_blank">v4.5.1-beta.1</a> - 2023-10-13
+_**Some features are exclusive to the commercial Benefactor Circle add-on**_  
+_See [`.\docs\Benefactor Circle`](Benefactor%20Circle.md) or [`https://explicitonsulting.at`](https://explicitconsulting.at/open-source/set-outlooksignatures) for details about these features and how you can benefit from them with a Benefactor Circle licence._
+
+_**Attention, cloud mailbox users:**_  
+_Microsoft actively enables roaming signatures in Exchange Online. See `What about the roaming signatures feature in Exchange Online?` in `.\docs\README` for details, known problems and workarounds._  
+_Set-OutlookSignatures can experimentally handle cloud roaming signatures since v4.0.0. See `MirrorLocalSignaturesToCloud` in `.\docs\README` for details._
+### Fixed
+- On-prem only: Make sure that Active Directory attributes of the current user, the current mailbox and their managers are available in environments where not every domain controller is also a global catalog server
+
+
 ## <a href="https://github.com/GruberMarkus/Set-OutlookSignatures/releases/tag/v4.5.0" target="_blank">v4.5.0</a> - 2023-09-29
 _**Some features are exclusive to the commercial Benefactor Circle add-on**_  
 _See [`.\docs\Benefactor Circle`](Benefactor%20Circle.md) or [`https://explicitonsulting.at`](https://explicitconsulting.at/open-source/set-outlooksignatures) for details about these features and how you can benefit from them with a Benefactor Circle licence._

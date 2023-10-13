@@ -194,7 +194,7 @@ Default value: $false
 
 .PARAMETER EmbedImagesInHtmlAdditionalSignaturePath
 Some feature as 'EmbedImagesInHtml' parameter, but only valid for the path defined in AdditionalSignaturesPath when not in simulation mode.
-Default value: $false
+Default value: $true
 
 .PARAMETER DocxHighResImageConversion
 Enables or disables high resolution images in HTML signatures.
@@ -1343,6 +1343,19 @@ function main {
                     $Search.SearchRoot = "GC://$((([System.DirectoryServices.AccountManagement.UserPrincipal]::Current).DistinguishedName -split ',DC=')[1..999] -join '.')"
                     $Search.Filter = "((distinguishedname=$(([System.DirectoryServices.AccountManagement.UserPrincipal]::Current).DistinguishedName)))"
                     $ADPropsCurrentUser = $Search.FindOne().Properties
+
+                    $Search.SearchRoot = "LDAP://$((([System.DirectoryServices.AccountManagement.UserPrincipal]::Current).DistinguishedName -split ',DC=')[1..999] -join '.')"
+                    $Search.Filter = "((distinguishedname=$(([System.DirectoryServices.AccountManagement.UserPrincipal]::Current).DistinguishedName)))"
+                    $ADPropsCurrentUserLdap = $Search.FindOne().Properties
+
+                    foreach ($keyName in @($ADPropsCurrentUserLdap.Keys)) {
+                        if (
+                            ($keyName -inotin $ADPropsCurrentUser.Keys) -or
+                            (-not ($ADPropsCurrentUser[$keyName]) -and ($ADPropsCurrentUserLdap[$keyName]))
+                        ) {
+                            $ADPropsCurrentUser[$keyName] = $ADPropsCurrentUserLdap[$keyName]
+                        }
+                    }
                 } else {
                     try {
                         $objTrans = New-Object -ComObject 'NameTranslate'
@@ -1353,9 +1366,23 @@ function main {
                         [System.Runtime.Interopservices.Marshal]::ReleaseComObject($objTrans) | Out-Null
                         Remove-Variable -Name 'objTrans'
                         Remove-Variable -Name 'objNT'
+
                         $Search.SearchRoot = "GC://$(($SimulateUserDN -split ',DC=')[1..999] -join '.')"
                         $Search.Filter = "((distinguishedname=$SimulateUserDN))"
                         $ADPropsCurrentUser = $Search.FindOne().Properties
+
+                        $Search.SearchRoot = "LDAP://$(($SimulateUserDN -split ',DC=')[1..999] -join '.')"
+                        $Search.Filter = "((distinguishedname=$SimulateUserDN))"
+                        $ADPropsCurrentUserLdap = $Search.FindOne().Properties
+
+                        foreach ($keyName in @($ADPropsCurrentUserLdap.Keys)) {
+                            if (
+                                ($keyName -inotin $ADPropsCurrentUser.Keys) -or
+                                (-not ($ADPropsCurrentUser[$keyName]) -and ($ADPropsCurrentUserLdap[$keyName]))
+                            ) {
+                                $ADPropsCurrentUser[$keyName] = $ADPropsCurrentUserLdap[$keyName]
+                            }
+                        }
                     } catch {
                         Write-Verbose $error[0]
                         Write-Host "    Simulation user '$($SimulateUser)' not found. Exit." -ForegroundColor REd
@@ -1548,6 +1575,19 @@ function main {
             $Search.SearchRoot = "GC://$(($ADPropsCurrentUser.manager -split ',DC=')[1..999] -join '.')"
             $Search.Filter = "((distinguishedname=$($ADPropsCurrentUser.manager)))"
             $ADPropsCurrentUserManager = $Search.FindOne().Properties
+
+            $Search.SearchRoot = "LDAP://$(($ADPropsCurrentUser.manager -split ',DC=')[1..999] -join '.')"
+            $Search.Filter = "((distinguishedname=$($ADPropsCurrentUser.manager)))"
+            $ADPropsCurrentUserManagerLdap = $Search.FindOne().Properties
+
+            foreach ($keyName in @($ADPropsCurrentUserManagerLdap.Keys)) {
+                if (
+                    ($keyName -inotin $ADPropsCurrentUserManager.Keys) -or
+                    (-not ($ADPropsCurrentUserManager[$keyName]) -and ($ADPropsCurrentUserManagerLdap[$keyName]))
+                ) {
+                    $ADPropsCurrentUserManager[$keyName] = $ADPropsCurrentUserManagerLdap[$keyName]
+                }
+            }
         } catch {
             $ADPropsCurrentUserManager = $null
         }
@@ -1818,9 +1858,23 @@ function main {
                                 $MailAddresses[$AccountNumberRunning] = ''
                                 $UserDomain = $null
                             } else {
-                                # Connect to Domain Controller (LDAP), as Global Catalog (GC) does not have all attributes
+                                $Search.SearchRoot = "GC://$(($(([adsi]"$($u[0].path)").distinguishedname) -split ',DC=')[1..999] -join '.')"
                                 $Search.Filter = "((distinguishedname=$(([adsi]"$($u[0].path)").distinguishedname)))"
                                 $ADPropsMailboxes[$AccountNumberRunning] = $Search.FindOne().Properties
+
+                                $Search.SearchRoot = "LDAP://$(($(([adsi]"$($u[0].path)").distinguishedname) -split ',DC=')[1..999] -join '.')"
+                                $Search.Filter = "((distinguishedname=$(([adsi]"$($u[0].path)").distinguishedname)))"
+                                $tempLdap = $Search.FindOne().Properties
+
+                                foreach ($keyName in @($tempLdap.Keys)) {
+                                    if (
+                                        ($keyName -inotin $ADPropsMailboxes[$AccountNumberRunning].Keys) -or
+                                        (-not ($ADPropsMailboxes[$AccountNumberRunning][$keyName]) -and ($tempLdap[$keyName]))
+                                    ) {
+                                        $ADPropsMailboxes[$AccountNumberRunning][$keyName] = $tempLdap[$keyName]
+                                    }
+                                }
+
                                 $UserDomain = $TrustsToCheckForGroups[$DomainNumber]
                                 $ADPropsMailboxesUserDomain[$AccountNumberRunning] = $TrustsToCheckForGroups[$DomainNumber]
                                 $LegacyExchangeDNs[$AccountNumberRunning] = $ADPropsMailboxes[$AccountNumberRunning].legacyexchangedn
@@ -2456,9 +2510,23 @@ function main {
 
                 if ($null -ne $TrustsToCheckForGroups[0]) {
                     $Search.searchroot = New-Object System.DirectoryServices.DirectoryEntry("GC://$($ADPropsMailboxesUserDomain[$AccountNumberRunning])")
+
                     try {
                         $Search.filter = "(distinguishedname=$($ADPropsCurrentMailbox.manager))"
                         $ADPropsCurrentMailboxManager = ([ADSI]"$(($Search.FindOne()).path)").Properties
+
+                        $Search.searchroot = New-Object System.DirectoryServices.DirectoryEntry("LDAP://$($ADPropsMailboxesUserDomain[$AccountNumberRunning])")
+                        $Search.filter = "(distinguishedname=$($ADPropsCurrentMailbox.manager))"
+                        $ADPropsCurrentMailboxManagerLdap = ([ADSI]"$(($Search.FindOne()).path)").Properties
+
+                        foreach ($keyName in @($ADPropsCurrentMailboxManagerLdap.Keys)) {
+                            if (
+                                ($keyName -inotin $ADPropsCurrentMailboxManager.Keys) -or
+                                (-not ($ADPropsCurrentMailboxManager[$keyName]) -and ($ADPropsCurrentMailboxManagerLdap[$keyName]))
+                            ) {
+                                $ADPropsCurrentMailboxManager[$keyName] = $ADPropsCurrentMailboxManagerLdap[$keyName]
+                            }
+                        }
                     } catch {
                         $ADPropsCurrentMailboxManager = @()
                     }

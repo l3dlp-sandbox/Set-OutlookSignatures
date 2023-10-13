@@ -43,10 +43,28 @@ The script core is **Free and Open-Source Software (FOSS)**. It is published und
 
 **Some features are exclusive to Benefactor Circle members.** Benefactor Circle members have access to an extension file enabling the exclusive features. This extension file is chargeable, and it is distributed under a proprietary, non-free and non-open-source licence.  Please see `.\docs\Benefactor Circle` for details.  
 
-**A big "Thank you!" for listing, featuring, supporting or sponsoring Set-OutlookSignatures!**
-<pre><a href="https://explicitconsulting.at" target="_blank"><img src="/src_Set-OutlookSignatures/logo/Others/ExplicIT Consulting, color on black.png" height="100" title="ExplicIT Consulting" alt="ExplicIT Consulting"></a>  <a href="https://joinup.ec.europa.eu/collection/free-and-open-source-software/solution/set-outlooksignatures/about" target="_blank"><img src="/src_Set-OutlookSignatures/logo/Others/EC Joinup Interoperable Europe.png" height="100" title="European Commission Joinup/Interoperable Europe programs" alt="European Commission Joinup/Interoperable Europe programs"></a>  <a href="https://startups.microsoft.com" target="_blank"><img src="/src_Set-OutlookSignatures/logo/Others/MS_Startups_Celebration_Badge_Dark.png" height="100" title="Proud to partner with Microsoft for Startups" alt="Proud to partner with Microsoft for Startups"></a>  <a href="https://archiveprogram.github.com/" target="_blank"><img src="/src_Set-OutlookSignatures/logo/Others/GitHub-Archive-Program-logo.png" height="100" title="GitHub Archive Program" alt="GitHub Archive Program"></a></pre>
+# Why choose Set-OutlookSignatures? <!-- omit in toc -->
+- Runs only on your clients, no server side installation
+- Mails are not routed through a cloud service, no SPF record change
+- Software does not call home
+- Works with on-prem, hybrid and cloud-only configurations
+- Supports Exchange Online roaming signatures, New Outlook and Outlook Web
+- Multi-customer capable
+- Works with linked mailboxes in resource forest scenarios
+- Users see signature when writing e-mails
+- More cost-effective than other cloud based products, more features than other on-prem products
 
-# Demo video  <!-- omit in toc -->
+The features reserved for Benefactor Circle members are available at a very, very competitive price compared to other commercial solutions that work with on-prem, hybrid and cloud-only configurations.
+
+There are also topics you need to be aware of:
+- As there is no server component, signatures can not be automatically added to mails sent from mobile devices. This will change as soon as Microsoft's roaming signature feature will be accessible by an API, and mobile applications start using this feature.  
+Set-OutlookSignatures Benefactor Circle already supports the roaming signature feature.
+- There is no graphical user interface. This is on purpose:
+  - End users typically never see the tool, only results.
+  - Admins typically need around two hours for the basic setup, as the default parameters are very well chosen and documented.
+  - Template maintainers need nothing but Word to create, modify and configure templates.
+
+# Demo video <!-- omit in toc -->
 <a href="https://www.youtube-nocookie.com/embed/K9TrCjTdRUI" target="_blank"><img src="https://img.youtube.com/vi/K9TrCjTdRUI/hqdefault.jpg" height="300" title="Set-OutlookSignatures demo video" alt="Set-OutlookSignatures demo video"></a>
 
 # Table of Contents <!-- omit in toc -->
